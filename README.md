@@ -1,2 +1,1 @@
-# Lenses
-Lenses, fp getter &amp; setter
+# Lenses, fp getter &amp; setter
