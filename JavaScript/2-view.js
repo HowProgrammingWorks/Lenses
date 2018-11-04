@@ -14,7 +14,7 @@ const lens = (getter, setter) => ({
 const person = {
   name: 'Marcus Aurelius',
   city: 'Rome',
-  born: 121
+  born: 121,
 };
 
 const nameLens = lens(getter('name'), setter('name'));
