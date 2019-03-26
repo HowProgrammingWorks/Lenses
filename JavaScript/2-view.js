@@ -2,6 +2,7 @@
 
 const getter = prop => obj => obj[prop];
 const setter = prop => (val, obj) => ({ ...obj, [prop]: val });
+
 const view = (lens, obj) => lens.get(obj);
 
 const lens = (getter, setter) => ({

@@ -2,6 +2,7 @@
 
 const getter = prop => obj => obj[prop];
 const setter = prop => (val, obj) => ({ ...obj, [prop]: val });
+
 const set = (lens, val, obj) => lens.set(val, obj);
 
 const lens = (getter, setter) => ({
