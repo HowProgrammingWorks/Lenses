@@ -17,11 +17,21 @@ const person = {
   born: 121,
 };
 
+const upper = s => s.toUpperCase();
+
+// Example 1
+
 const nameLens = lens('name');
 
 console.log('view name:', view(nameLens, person));
-
 console.log('set name:', set(nameLens, 'Marcus', person));
-
-const upper = s => s.toUpperCase();
 console.log('over name:', over(nameLens, upper, person));
+
+// Example 2
+console.log();
+
+const renameLens = lens('name', 'personName');
+
+console.log('view name:', view(renameLens, person));
+console.log('set name:', set(renameLens, 'Marcus', person));
+console.log('over name:', over(renameLens, upper, person));
