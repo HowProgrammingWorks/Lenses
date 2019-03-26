@@ -9,7 +9,7 @@ const lens = (source, destination = source) => ({
   get: obj => obj[source],
   set: (val, obj) => ({ ...obj, [destination]: val }),
   delete: obj => {
-    const { [source]: forgot, ...other } = obj;
+    const { [destination]: forgot, ...other } = obj;
     return other;
   },
 });
