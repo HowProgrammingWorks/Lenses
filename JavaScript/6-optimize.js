@@ -6,9 +6,9 @@ const over = (lens, map, obj) => lens.set(map(lens.get(obj)), obj);
 const remove = (lens, obj) => lens.delete(obj);
 
 const lens = (source, destination = source) => ({
-  get: obj => obj[source],
+  get: (obj) => obj[source],
   set: (val, obj) => ({ ...obj, [destination]: val }),
-  delete: obj => {
+  delete: (obj) => {
     const { [destination]: forgot, ...other } = obj;
     return other;
   },
@@ -22,7 +22,7 @@ const person = {
   born: 121,
 };
 
-const upper = s => s.toUpperCase();
+const upper = (s) => s.toUpperCase();
 
 console.log('\nExample 1\n');
 

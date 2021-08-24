@@ -39,5 +39,5 @@ console.log('view name:', Lens.view(nameLens, person));
 
 console.log('set name:', Lens.set(nameLens, 'Marcus', person));
 
-const upper = s => s.toUpperCase();
+const upper = (s) => s.toUpperCase();
 console.log('over name:', Lens.over(nameLens, upper, person));
